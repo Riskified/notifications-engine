@@ -18,8 +18,8 @@ type service struct {
 
 func NewService(templates map[string]services.Notification) (*service, error) {
 	f := sprig.TxtFuncMap()
-	delete(f, "env")
-	delete(f, "expandenv")
+	//delete(f, "env")
+	//delete(f, "expandenv")
 
 	svc := &service{templaters: map[string]services.Templater{}}
 	for name, cfg := range templates {
